@@ -43,7 +43,7 @@ echo "export EDITOR='subl' -w" >> ~/.zshrc
 Now you can run $ subl [file] to edit the file you want.
 
 ## Apache Configuration
-###Edit the httpd config
+### Edit the httpd config
 ```bash
 $ subl /usr/local/etc/httpd/httpd.conf
 ```
@@ -86,4 +86,25 @@ Change it to:
 User MaxPeters
 Group staff
 ```
----
+
+### Servername
+Find:
+```bash
+#ServerName www.example.com:8080
+```
+Change it to:
+```bash
+ServerName localhost
+```
+
+### Sites folder
+Create the ~/Sites folder and create a testdocument
+```bash
+$ mkdir ~/Sites
+$ echo "<h1>My User Web Root is working</h1>" > ~/Sites/index.html
+```
+Restart apache
+```bash
+$ sudo apachectl -k restart
+```
+Check http://localhost, it should display : 'My User Web Root is working'.
