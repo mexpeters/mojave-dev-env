@@ -71,12 +71,14 @@ Change the 'directory' underneath that line as well:
 <Directory "/Users/MaxPeters/Sites">
 ```
 In that same 'directory' tag, change AllowOverride **None** to **All**
+
 ---
 Find:
 ```bash
 #LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so
 ```
 **Uncomment that line**
+
 ---
 Find:
 ```bash
