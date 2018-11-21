@@ -163,3 +163,67 @@ Test if PHP is working by creating a testfile.
 echo "<?php phpinfo();" > ~/Sites/info.php
 ```
 If it's working correctly it should show PHP information.
+
+# MySQL
+To install MySQL run these commands:
+```bash
+$ brew update
+$ brew install mysql
+```
+To auto-start MySQL Server:
+```bash
+$ brew services start mysql
+```
+Download MySequel Pro, http://www.sequelpro.com/
+
+**_Try to connect through socket without filling in anything, if it doesn't work try user: root, password: -._**
+### MySQL Login fix
+Open terminal and login.
+```bash
+$ mysql -u root
+or
+$ mysql -u root -p
+```
+Then :
+```bash
+$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
+if that doesn't work;
+$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[password]';
+$ exit
+```
+Restart MySQL Sever
+```bash
+$ brew services stop mysql
+$ brew services start mysql
+```
+
+# Apache Virtual Hosts
+Edit httpd config
+```bash
+subl /usr/local/etc/httpd/httpd.conf
+```
+Uncomment these lines
+```bash
+$ LoadModule vhost_alias_module lib/httpd/modules/mod_vhost_alias.so
+
+# Virtual hosts
+Include /usr/local/etc/httpd/extra/httpd-vhosts.conf
+```
+
+Now I can edit the vhosts file and setup a virtual host.
+```bash
+$ subl /usr/local/etc/httpd/extra/httpd-vhosts.conf
+```
+Comment the dummy virtual hosts out and add these lines:
+```bash
+<VirtualHost *:80>
+    DocumentRoot "/Users/MaxPeters/Sites"
+    ServerName localhost
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "/Users/MaxPeters/Sites/test.local"
+    ServerName test.local
+</VirtualHost>
+```
+Create a test.local inside ~/Sites and add an HTML to test. Then go to test.local and check if it works.
