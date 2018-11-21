@@ -38,7 +38,6 @@ Set Sublime as default editor
 mkdir ~/bin
 ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 echo 'export PATH=$PATH:$HOME/bin' >> ~/.zshrc
-echo "export EDITOR='subl' -w" >> ~/.zshrc
 ```
 Now you can run $ subl [file] to edit the file you want.
 
