@@ -55,7 +55,7 @@ Change it to:
 ```bash
 listen 80
 ```
-###Change the DocumentRoot
+### Change the DocumentRoot
 Find:
 ```bash
 DocumentRoot "/usr/local/var/www"
