@@ -47,5 +47,45 @@ Edit the httpd config
 ```bash
 $ subl /usr/local/etc/httpd/httpd.conf
 ```
-
-
+---
+Find:
+```bash
+listen 8080
+```
+Change it to:
+```bash
+listen 80
+```
+---
+Change the documentroot
+Find:
+```bash
+DocumentRoot "/usr/local/var/www"
+```
+Change it to:
+```bash
+DocumentRoot /Users/MaxPeters/Sites
+```
+Change the 'directory' underneath that line as well:
+```bash
+<Directory "/Users/MaxPeters/Sites">
+```
+In that same 'directory' tag, change AllowOverride **None** to **All**
+---
+Find:
+```bash
+#LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so
+```
+**Uncomment that line**
+---
+Find:
+```bash
+User _www
+Group _www
+```
+Change it to:
+```bash
+User MaxPeters
+Group staff
+```
+---
