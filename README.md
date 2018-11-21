@@ -43,11 +43,10 @@ echo "export EDITOR='subl' -w" >> ~/.zshrc
 Now you can run $ subl [file] to edit the file you want.
 
 ## Apache Configuration
-Edit the httpd config
+###Edit the httpd config
 ```bash
 $ subl /usr/local/etc/httpd/httpd.conf
 ```
----
 Find:
 ```bash
 listen 8080
@@ -56,8 +55,7 @@ Change it to:
 ```bash
 listen 80
 ```
----
-Change the documentroot
+###Change the DocumentRoot
 Find:
 ```bash
 DocumentRoot "/usr/local/var/www"
@@ -72,14 +70,12 @@ Change the 'directory' underneath that line as well:
 ```
 In that same 'directory' tag, change AllowOverride **None** to **All**
 
----
 Find:
 ```bash
 #LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so
 ```
 **Uncomment that line**
-
----
+### User & group
 Find:
 ```bash
 User _www
