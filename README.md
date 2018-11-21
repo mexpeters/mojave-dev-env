@@ -30,3 +30,22 @@ Run this to auto-start the service on start-up of your MacBook.
 $ sudo brew services start httpd
 ```
 Go to http://localhost:8080 and check if everything is working.
+
+
+## Edit files with Sublime
+Set Sublime as default editor
+```bash
+mkdir ~/bin
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+echo 'export PATH=$PATH:$HOME/bin' >> ~/.zshrc
+echo "export EDITOR='subl' -w" >> ~/.zshrc
+```
+Now you can run $ subl [file] to edit the file you want.
+
+## Apache Configuration
+Edit the httpd config
+```bash
+$ subl /usr/local/etc/httpd/httpd.conf
+```
+
+
