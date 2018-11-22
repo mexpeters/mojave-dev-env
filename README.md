@@ -226,3 +226,24 @@ Comment the dummy virtual hosts out and add these lines:
 </VirtualHost>
 ```
 Create a test.local inside ~/Sites and add an HTML to test. Then go to test.local and check if it works.
+
+# Install NVM
+Install NVM
+```bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+```
+If nvm --version doesn't work:
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+### Install Node
+Install Node and use latest version ( May have to run a command, terminal will tell for fix )
+```bash
+$ nvm install node
+$ nvm use node
+$ nvm install --lts
+$ nvm use --lts
+```
+```
