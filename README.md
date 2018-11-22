@@ -226,6 +226,13 @@ Comment the dummy virtual hosts out and add these lines:
     ServerName test.local
 </VirtualHost>
 ```
+Now open the hostfile and add the following lines:
+```bash
+subl /private/etc/hosts
+
+127.0.0.1 test.local
+::1 test.local 
+```
 Create a test.local inside ~/Sites and add an HTML to test. Then go to test.local and check if it works.
 
 # Install NVM
