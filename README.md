@@ -114,6 +114,7 @@ Check http://localhost, it should display : 'My User Web Root is working'.
 To install PHP Version 7.2 run:
 ```bash
 $ brew install php@7.2
+$ brew services start php@7.2
 ```
 Run this command to check if the right PHP version is installed
 ```bash
