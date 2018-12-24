@@ -234,6 +234,11 @@ $ sublime /private/etc/hosts
 127.0.0.1 test.local
 ::1 test.local 
 ```
+
+Restart apache
+```
+$ sudo apachectl restart
+```
 Create a test.local inside ~/Sites and add an HTML to test. Then go to test.local and check if it works.
 
 # Install NVM
