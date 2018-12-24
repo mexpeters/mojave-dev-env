@@ -201,7 +201,7 @@ $ brew services start mysql
 # Apache Virtual Hosts
 Edit httpd config
 ```bash
-subl /usr/local/etc/httpd/httpd.conf
+sublime /usr/local/etc/httpd/httpd.conf
 ```
 Uncomment these lines
 ```bash
