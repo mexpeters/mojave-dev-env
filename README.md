@@ -213,7 +213,7 @@ Include /usr/local/etc/httpd/extra/httpd-vhosts.conf
 
 Now I can edit the vhosts file and setup a virtual host.
 ```bash
-$ subl /usr/local/etc/httpd/extra/httpd-vhosts.conf
+$ sublime /usr/local/etc/httpd/extra/httpd-vhosts.conf
 ```
 Comment the dummy virtual hosts out and add these lines:
 ```bash
@@ -229,7 +229,7 @@ Comment the dummy virtual hosts out and add these lines:
 ```
 Now open the hostfile and add the following lines:
 ```bash
-subl /private/etc/hosts
+$ sublime /private/etc/hosts
 
 127.0.0.1 test.local
 ::1 test.local 
