@@ -208,7 +208,7 @@ Uncomment these lines
 $ LoadModule vhost_alias_module lib/httpd/modules/mod_vhost_alias.so
 
 # Virtual hosts
-Include /usr/local/etc/httpd/extra/httpd-vhosts.conf
+#Include /usr/local/etc/httpd/extra/httpd-vhosts.conf
 ```
 
 Now I can edit the vhosts file and setup a virtual host.
