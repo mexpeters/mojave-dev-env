@@ -153,6 +153,14 @@ Change it to:
     SetHandler application/x-httpd-php
 </FilesMatch>
 ```
+Find these lines and change AllowOverride from none to all
+```
+# AllowOverride controls what directives may be placed in .htaccess files.
+# It can be "All", "None", or any combination of the keywords:
+#   AllowOverride FileInfo AuthConfig Limit
+#
+AllowOverride none
+```
 
 Save the file & stop and restart apache
 ```bash
