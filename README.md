@@ -36,7 +36,7 @@ Go to http://localhost:8080 and check if everything is working.
 Set Sublime as default editor
 ```bash
 mkdir ~/bin
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 echo 'export PATH=$PATH:$HOME/bin' >> ~/.zshrc
 export EDITOR='subl -w'
 ```
