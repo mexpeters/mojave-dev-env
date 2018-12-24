@@ -124,7 +124,7 @@ $ php -v
 # PHP Apache Setup
 Edit httpd config
 ```bash
-$ subl /usr/local/etc/httpd/httpd.conf
+$ sublime /usr/local/etc/httpd/httpd.conf
 ```
 The last change I made to this was:
 ```bash
