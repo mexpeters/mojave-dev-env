@@ -40,12 +40,12 @@ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/loca
 echo 'export PATH=$PATH:$HOME/bin' >> ~/.zshrc
 export EDITOR='subl -w'
 ```
-Now you can run $ subl [file] to edit the file you want.
+Now you can run $ sublime [file] to edit the file you want.
 
 ## Apache Configuration
 ### Edit the httpd config
 ```bash
-$ subl /usr/local/etc/httpd/httpd.conf
+$ sublime /usr/local/etc/httpd/httpd.conf
 ```
 Find:
 ```bash
