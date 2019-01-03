@@ -269,3 +269,11 @@ $ nvm install --lts
 $ nvm use --lts
 ```
 ```
+
+### Install Gulp
+Install Gulp globally and in the project itself
+```bash
+$ npm install gulp-cli -g ( globally )
+$ npm install gulp -D ( project itself )
+```
+Then inside the project where the gulpfile is do `$ npm install`
