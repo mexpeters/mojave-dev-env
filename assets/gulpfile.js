@@ -121,7 +121,7 @@ gulp.task('js-lint',['sass-lint'], () => {
 gulp.task('js', () => {
 
 	return gulp.src(['src/js/site.js'])
-		.pipe($.sourcemaps.init())
+		// .pipe($.sourcemaps.init())
 		.pipe($.browserify({
 			insertGlobals : true,
 			debug : debug
@@ -190,10 +190,10 @@ gulp.task( "dev", ['sass-lint', 'sass', 'map', 'js-lint', 'js', 'js-bundle'], ()
 	browserSync.init({
 		proxy: proxy,
 		ghostMode: false,
-		https: {
-		    "key": "/etc/apache2/ssl/localhost.key",
-		    "cert": "/etc/apache2/ssl/localhost.crt"
-		},		
+		// https: {
+		//     "key": "/etc/apache2/ssl/localhost.key",
+		//     "cert": "/etc/apache2/ssl/localhost.crt"
+		// },		
 	});
 
 
