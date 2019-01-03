@@ -183,7 +183,7 @@ To auto-start MySQL Server:
 ```bash
 $ brew services start mysql
 ```
-Download MySequel Pro, http://www.sequelpro.com/
+Download MySQL Workbench, https://dev.mysql.com/downloads/workbench/
 
 **_Try to connect through socket without filling in anything, if it doesn't work try user: root, password: -._**
 ### MySQL Login fix
