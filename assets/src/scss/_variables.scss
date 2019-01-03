@@ -1,0 +1,65 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Fonts
+// -------------------
+
+$headingFont: 'Trebuchet MS', sans-serif;
+$paragraphFont: 'Helvetica', sans-serif;
+
+
+// Colours
+// -------------------
+
+$primaryColor: #69b5e1;
+$secondaryColor: #9d6ab4;
+
+$textColor: #000;
+$baseColor: #eee;
+
+$socialFacebook: #3b5998;
+$socialTwitter: #00aced;
+$socialInstagram: #3f729b;
+$socialYoutube: #cd201f;
+
+$errorColor: #a00;
+$successColor: #0a0;
+$baseFontSize: 16;
+
+// Breakpoints
+// -------------------
+
+$breakpoints: (
+	'mobile': (max-width: 736px),
+	'tablet': (max-width: 1024px),
+	'desktop': (min-width: 1240px),
+);
+
+// Include gutter on outside 
+$gutterOnOutside: true;
+
+// Breakpoints Grid Settings
+// -------------------
+
+$grid-settings: (
+	base: (
+		container-columns: 12,
+		gutter: 1%,
+		max-width: calc(100% - 100px),
+	),
+	desktop: (
+		container-columns: 12,
+		gutter: 1%,
+		max-width: 1200px,
+	),
+	tablet: (
+		container-columns: 12,
+		gutter: 1%,
+		max-width: calc(100% - 80px),
+	),
+	mobile: (
+		container-columns: 1,
+		gutter: 5%,
+	)
+);
