@@ -21,3 +21,148 @@
 img {
 	image-rendering: -webkit-optimize-contrast;
 }
+
+body {
+	background-color: #f9fafa;
+}
+
+.navbar {
+	margin-bottom: 20px;
+	background-color: #263238;
+
+	.headerText {
+		margin: 0;
+		padding: 30px 0;
+		padding-left: 25px;
+		font-weight: bold;
+		// text-transform: uppercase;
+		font-size: 1.2rem;
+		color: white;
+	}
+}
+
+.login {
+	@include columns(5, 3.5);
+	margin-top: 150px;
+
+	.loginSubmit {
+		border-radius: 50px;
+		float: right;
+		opacity: 0.8;
+
+	}
+
+	input {
+		width: 100%;
+		border-radius: 50px;
+	}
+
+	label {
+		opacity: 0.5;
+	    margin-bottom: 10px;
+	    margin-left: 5px;
+	}
+}
+
+
+#loggedIn {
+	.shoesWrapper {
+		@include columns(9, 0, 0%);
+
+		.shoe {
+			@include columns(3);
+			margin-bottom: 20px;
+
+			img {
+				width: 100%;
+			}
+
+			span {
+				font-weight: bold;
+			}
+
+			.shoeBrand,
+			.shoeType,
+			.shoeSize,
+			.shoePrice,
+			.shoeStock {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.ordersWrapper {
+		@include columns(3, 0, 0%);
+		border-left: 2px solid #263238;
+		border-top: 2px solid #263238;
+
+
+		.ordersHeader {
+			text-transform: uppercase;		
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+		.order {
+
+		}
+	}
+
+	#logout {
+		position: absolute;
+		background-color: transparent;
+		color: white;
+		border-radius: 50px;
+		font-weight: bold;
+		top: 18px;
+		right: 30px;
+		transition: all 200ms ease;
+
+		&:hover {
+			color: grey;
+		}
+	}
+}
+
+
+.role {
+	&--client {
+		.shoesEditWrapper {
+			display: none;
+		}
+	}
+
+	&--worker {
+		#loggedIn {
+			.ordersWrapper {
+				display: none;
+			}
+
+			.shoesEditWrapper {
+				@include columns(9, 0, 0%);
+
+				.newShoeWrapper {
+					@include columns(3);
+				}
+
+				.shoe {
+					@include columns(3);
+					margin-bottom: 20px;
+
+					img {
+						width: 100%;
+					}
+
+					span {
+						font-weight: bold;
+					}
+
+					input {
+						text-transform: uppercase;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
